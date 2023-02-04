@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    //то, куда производится сборка, в нашем случаее не важна, т.к. собираем с помощью вебпака
+    "outDir": "./dist/",
+    //не позволяет использовать переменные, без явного указания типа
+    "noImplicitAny": true,
+    //указываем вид export / import
+    "module": "ESNext",
+    //указываем версию стандарта, в который код будет компилироваться
+    "target": "es5",
+    // позволяет обрабатывать tsx и jsx айлы
+    "jsx": "react-jsx",
+    "allowJs": true,
+    "moduleResolution": "node",
+    //"baseUrl": "true",
+    // позволяет работать с пакетами, которые используют common js как с обычнми пакетами с помощью import require() module.export
+    // т.е позволяет делать так import Moment from 'moment'
+    "esModuleInterop": true,
+    //если какая-то библиотека не имеет default import
+    //лоадеры вроде ts-loader или babel-loader автоматически создают их
+    //вместо такого импорта
+    //import * as React from 'react'
+    //можно писать такой
+    //import React from 'react'
+    "allowSyntheticDefaultImports": true
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
+  }
+}
