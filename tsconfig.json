@@ -12,7 +12,11 @@
     "jsx": "react-jsx",
     "allowJs": true,
     "moduleResolution": "node",
-    //"baseUrl": "true",
+    "baseUrl": ".",
+    //Все экспорты, импорты будут идти из папки src
+    "paths": {
+      "*" : ["./src/*"]
+    },
     // позволяет работать с пакетами, которые используют common js как с обычнми пакетами с помощью import require() module.export
     // т.е позволяет делать так import Moment from 'moment'
     "esModuleInterop": true,
