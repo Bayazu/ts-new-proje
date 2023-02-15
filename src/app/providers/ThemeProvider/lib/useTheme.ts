@@ -17,7 +17,5 @@ export function useTheme(): UseThemeResult {
 
     }
 
-    console.log(theme);
-
     return {theme, toggleTheme}
 }
