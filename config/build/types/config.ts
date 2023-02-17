@@ -1,4 +1,4 @@
-export type BuildMode = 'production' | 'development' //заменить на продакшен
+export type BuildMode = 'production' | 'development' // заменить на продакшен
 
 export interface BuildPaths {
     entry : string;
