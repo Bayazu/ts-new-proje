@@ -1,4 +1,3 @@
-export function someFn(arg : number) : string{
-    console.log('FUNC')
-    return ''
+export function someFn(arg : number) : number {
+    return arg;
 }
