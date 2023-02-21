@@ -38,6 +38,9 @@ module.exports = {
         'import/no-extraneous-dependencies': 'off',
         'no-underscore-dangle': 'off',
         'max-len': ['error', { code: 120, ignoreComments: true }],
+        'no-restricted-globals': 'off',
+        'jsx-a11y/no-static-element-interactions': 'off',
+        'jsx-a11y/click-events-have-key-events': 'off',
     },
     globals: {
         __IS_DEV__: true,
