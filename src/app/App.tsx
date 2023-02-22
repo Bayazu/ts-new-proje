@@ -1,4 +1,4 @@
-import React, { Suspense, useEffect } from 'react';
+import React, { Suspense } from 'react';
 import './styles/index.scss';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTheme } from 'app/providers/ThemeProvider';
@@ -8,6 +8,9 @@ import { Sidebar } from 'widgets/Sidebar';
 
 function App() {
     const { theme } = useTheme();
+    const arr : any[] = [];
+    // eslint-disable-next-line no-console
+    console.log(arr);
 
     return (
         <div className={classNames('app', {}, [theme])}>

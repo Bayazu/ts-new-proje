@@ -5,6 +5,24 @@ on:
   pull_request:
     branches: [ master ]
 jobs:
+  loki:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [ 16.16.x ]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Staring Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: install modules
+        run: npm install
+      - name: build storybook
+        run: npm run storybook:build
+      - name: screenshot testing
+        run: npm run test:ui:ci
+
   pipeline:
     runs-on: ubuntu-latest
     strategy:
@@ -27,7 +45,4 @@ jobs:
         run: npm run lint:scss
       - name: unit testing
         run: npm run test:unit
-      - name: build storybook
-        run: npm run storybook:build
-      - name: screenshot testing
-        run: npm run test:ui:ci
+
