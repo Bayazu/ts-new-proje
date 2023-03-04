@@ -20,6 +20,7 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
     }
 
     componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+        // eslint-disable-next-line no-console
         console.log(error, errorInfo);
     }
 
